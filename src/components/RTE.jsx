@@ -2,7 +2,7 @@ import React from 'react'
 import { Editor } from '@tinymce/tinymce-react'
 import { Controller } from 'react-hook-form'
 
-export default function RTE({name,control,label,defaultValue=""}) {
+export default function RTE({name,control,label,defaultValue="Write your text here"}) {
   return (
     <div className='w-full'>
         {label && <label className='inline-block mb-1 pl-1'>
@@ -11,10 +11,11 @@ export default function RTE({name,control,label,defaultValue=""}) {
         <Controller
         name={name||"content"}
         control={control}
+        // defaultValue={defaultValue}
         render={({field:{onChange}})=>(
             <Editor
   apiKey='izw7u6nkwup5ta056vpc0wciavtco13o246q0hcy8zjve5mw'
- initialValue='default value'
+ initialValue={defaultValue} 
              init={
                 {
                  initialValue: defaultValue,

@@ -7,6 +7,8 @@ function AllPosts() {
     useEffect(() => {}, [])
     appwriteService.getPosts([]).then((posts) => {
         if (posts) {
+
+            //active Inactive
             setPosts(posts.documents)
         }
     })

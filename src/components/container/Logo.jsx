@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import logoImage from '../../assets/logo.png';
+ // Adjust the path as necessary
 
-function Logo({width= '100px'}) {
+function Logo({ width = '100px' }) {
   return (
-    <div>Logo</div>
+    <div>
+      <img src={logoImage} alt="Logo" style={{ width }} />
+    </div>
   )
 }
 
-export default Logo
+export default Logo;

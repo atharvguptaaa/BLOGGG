@@ -4,21 +4,26 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import appwriteService from "../appwrite/config";
 import { Button, Container } from "../components";
 import parse from "html-react-parser";
-import { useSelector } from "react-redux";
+ import { useSelector } from "react-redux";
+
 
 export default function Post() {
     const [post, setPost] = useState(null);
+    // const [userData, setUserData] = useState(null);
+
+
     const { slug } = useParams();
     const navigate = useNavigate();
+ 
 
     const userData = useSelector((state) => state.auth.userData);
 
-    const isAuthor = post && userData ? post.userId === userData.$id : false;
+    const isAuthor = post && userData ?  post.userId === userData.$id  : false;
 
     useEffect(() => {
         if (slug) {
             appwriteService.getPost(slug).then((post) => {
-                if (post) setPost(post);
+                if(post) {setPost(post); }
                 else navigate("/");
             });
         } else navigate("/");
@@ -50,7 +55,7 @@ export default function Post() {
                                     Edit
                                 </Button>
                             </Link>
-                            <Button bgColor="bg-red-500" onClick={deletePost}>
+                            <Button bgColor="bg-blue-500" onClick={deletePost}>
                                 Delete
                             </Button>
                         </div>
@@ -61,7 +66,7 @@ export default function Post() {
                 </div>
                 <div className="browser-css">
                     {parse(post.content)}
-                    </div>
+                </div>
             </Container>
         </div>
     ) : null;
