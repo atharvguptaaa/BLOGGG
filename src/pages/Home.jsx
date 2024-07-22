@@ -10,7 +10,7 @@ function  Home() {
      useEffect( ()=>{
          appwriteService.getPosts([]).then((posts)=>{
             if(posts){
-                console.log(posts.documents.length)
+                console.log(posts.documents)
                  setPosts(posts.documents)
             }
         })
@@ -56,9 +56,9 @@ function  Home() {
             <Container>
                 <div className='flex flex-wrap'>
                     {posts.map((post) => (
-                        <div key={post.$id} className='p-2 w-1/4'>
+                      post.status==="public"&&(  <div key={post.$id} className='p-2 w-1/4'>
                             <PostCard {...post} />
-                        </div>
+                        </div>)
                     ))}
                 </div>
             </Container>

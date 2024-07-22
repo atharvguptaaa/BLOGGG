@@ -8,8 +8,8 @@ import parse from "html-react-parser";
 
 
 export default function Post() {
+   
     const [post, setPost] = useState(null);
-    // const [userData, setUserData] = useState(null);
 
 
     const { slug } = useParams();
