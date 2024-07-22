@@ -25,6 +25,11 @@ function Header() {
             <Logo width='70px'/>
           </Link>
           
+          {/* Company Name */}
+          <span className='flex-1 text-center text-4xl font-bold text-blue-950 text-opacity-50'>
+            BLOGGG
+          </span>
+
           {/* Hamburger Icon */}
           <div className='md:hidden'>
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className='p-2'>
