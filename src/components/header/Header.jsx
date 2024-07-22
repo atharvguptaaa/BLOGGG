@@ -26,7 +26,7 @@ function Header() {
           </Link>
           
           {/* Company Name */}
-          <span className='flex-1 text-center font-bold text-gray-900 text-opacity-85 text-2xl md:text-4xl ' >
+          <span className='flex-1 text-center font-bold text-gray-900 text-opacity-85 text-xl md:text-3xl ' >
             BLOGGG
           </span>
 
