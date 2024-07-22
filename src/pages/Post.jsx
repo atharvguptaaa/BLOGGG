@@ -8,7 +8,10 @@ import parse from "html-react-parser";
 
 
 export default function Post() {
+    
    
+   // console.log(useSelector((state) => state.onPost.posts));
+
     const [post, setPost] = useState(null);
 
 
@@ -23,11 +26,13 @@ export default function Post() {
     useEffect(() => {
         if (slug) {
             appwriteService.getPost(slug).then((post) => {
-                if(post) {setPost(post); }
+                if(post) {setPost(post); console.log(post);} 
                 else navigate("/");
             });
         } else navigate("/");
     }, [slug, navigate]);
+
+
 
     const deletePost = () => {
         appwriteService.deletePost(post.$id).then((status) => {
@@ -67,6 +72,12 @@ export default function Post() {
                 <div className="browser-css">
                     {parse(post.content)}
                 </div>
+
+              { isAuthor&&( <div className="mt-4 font-bold">
+                    {/* <p>Author: {}</p>   */}
+                    <p>Status: <span className={post.status === 'private' ? 'text-blue-600' : 'text-green-600'}>{post.status}</span></p> 
+                </div>)}
+
             </Container>
         </div>
     ) : null;

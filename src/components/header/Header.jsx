@@ -3,6 +3,7 @@ import { Container, Logo, LogoutBtn } from '../index';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import Image from '../../assets/title.png';
 
 function Header() {
   const authStatus = useSelector((state) => state.auth.status);
@@ -27,7 +28,7 @@ function Header() {
           
           {/* Company Name */}
           <span className='flex-1 text-center font-bold text-gray-900 text-opacity-85 text-xl md:text-3xl ' >
-            BLOGGG
+            <img src={Image} alt="" width="200px" className='mx-auto' />
           </span>
 
           {/* Hamburger Icon */}

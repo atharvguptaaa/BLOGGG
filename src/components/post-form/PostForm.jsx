@@ -4,6 +4,8 @@ import {Button, Input, Select, RTE} from '../index'
 import appwriteService from '../../appwrite/config'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+// import { postUser } from '../../store/postSlice'
+// import { useDispatch } from 'react-redux'
 
 
 export default function PostForm({ post }) {
@@ -19,6 +21,8 @@ export default function PostForm({ post }) {
     const navigate = useNavigate();
     
     const userData = useSelector((state) => state.auth.userData);
+
+    // const dispatch = useDispatch();
     
 
     const submit = async (data) => {
@@ -50,6 +54,10 @@ export default function PostForm({ post }) {
                 }
             }
         }
+
+        // dispatch(postUser(userData))
+       
+
     };
 
     const slugTransform = useCallback((value) => {

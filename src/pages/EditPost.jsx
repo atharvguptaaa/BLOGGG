@@ -13,6 +13,7 @@ function EditPost() {
             if(post){
                setPost(post) 
             }
+            console.log(post);
            
         })
         } else{
