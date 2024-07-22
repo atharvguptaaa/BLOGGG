@@ -56,11 +56,11 @@ export default function Post() {
                     {isAuthor && (
                         <div className="absolute right-6 top-6">
                             <Link to={`/edit-post/${post.$id}`}>
-                                <Button bgColor="bg-green-500" className="mr-3">
+                                <Button bgColor="bg-green-600" className="mr-3 hover:bg-green-700  px-2 py-1.5">
                                     Edit
                                 </Button>
                             </Link>
-                            <Button bgColor="bg-blue-500" onClick={deletePost}>
+                            <Button bgColor="bg-blue-600" className="  hover:bg-blue-700 px-2 py-1.5" onClick={deletePost}>
                                 Delete
                             </Button>
                         </div>

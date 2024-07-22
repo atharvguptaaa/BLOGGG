@@ -27,7 +27,7 @@ function Header() {
           </Link>
           
           {/* Company Name */}
-          <span className='flex-1 text-center font-bold text-gray-900 text-opacity-85 text-xl md:text-3xl ' >
+          <span className='flex-1 text-center ' >
             <img src={Image} alt="" width="200px" className='mx-auto' />
           </span>
 
