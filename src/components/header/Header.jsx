@@ -23,13 +23,13 @@ function Header() {
       <Container>
         <nav className='flex items-center justify-between'>
           <Link to="/" className='flex items-center'>
-            <Logo width='70px'/>
+            <Logo width='150px'/>
           </Link>
           
           {/* Company Name */}
-          <span className='flex-1 text-center ' >
+          {/* <span className='flex-1 text-center ' >
             <img src={Image} alt="" width="200px" className='mx-auto' />
-          </span>
+          </span> */}
 
           {/* Hamburger Icon */}
           <div className='md:hidden'>

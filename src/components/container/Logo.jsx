@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImage from '../../assets/logo.jpg';
+import logoImage from '../../assets/title.png';
  // Adjust the path as necessary
 
 function Logo({ width = '100px' }) {
