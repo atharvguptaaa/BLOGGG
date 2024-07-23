@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from 'react'
-import { Container, PostCard } from '../components'
+import { Container, PostCard, Loading } from '../components'
 import appwriteService from "../appwrite/config";
 import { useSelector } from 'react-redux';
+
 function MyPosts() {
+    const [isLoading, setIsLoading] = useState(true);
+
     const [posts, setPosts] = useState([])
     const userData = useSelector((state) => state.auth.userData);
     useEffect(() => {
@@ -11,12 +14,17 @@ function MyPosts() {
 
                 setPosts(posts.documents)
             }
+            setIsLoading(false)
         })
+        
+       
     },[])
     
-    const userPosts= posts.filter((post)=>post.userId===userData.$id)
 
-  return (
+    const userPosts= posts.filter((post)=>post.userId===userData.$id)
+    
+
+  return !isLoading? (
     <div className='w-full py-8'>
         <Container>
             <div className='flex flex-wrap'>
@@ -34,7 +42,7 @@ function MyPosts() {
             </div>
             </Container>
     </div>
-  )
+  ) : <Loading />;
 }
 
 export default MyPosts

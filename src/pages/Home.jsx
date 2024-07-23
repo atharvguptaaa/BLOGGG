@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import appwriteService from '../appwrite/config';
-import { Container, PostCard } from '../components';
+import { Container, PostCard,Loading } from '../components';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
+// import Loading from '../components';
+
 function Home() {
+    const [isLoading, setIsLoading] = useState(true);
+
     const [posts, setPosts] = useState([]);
     const authStatus = useSelector((state) => state.auth.status);
 
@@ -13,8 +17,14 @@ function Home() {
             if (posts) {
                 setPosts(posts.documents);
             }
+            setIsLoading(false)
         });
+       
     }, []);
+
+    if (isLoading) {
+        return <Loading />;
+      }
 
     if (authStatus === false) {
         return (
@@ -32,7 +42,7 @@ function Home() {
                 </Container>
             </div>
         );
-    } else if (posts.length === 0 && authStatus === true) {
+    } else if (posts.length === 0 && authStatus === true &&Loading===false) {
         return (
             <div className="w-full py-8 mt-4 text-center">
                 <Container>
