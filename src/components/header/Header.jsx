@@ -41,10 +41,10 @@ function Header() {
           </div>
 
           {/* Navigation Items */}
-          <ul className={`md:flex ml-auto ${isMenuOpen ? 'flex' : 'hidden'} flex-col md:flex-row`}>
+          <ul className={`md:flex ml-auto ${isMenuOpen ? 'flex' : 'hidden'} flex-col  md:flex-row`}>
             {navItems.map((item) => item.active && (
               <li key={item.name}>
-                <button onClick={() => navigate(item.slug)} className='block px-6 py-2 rounded-full hover:bg-blue-100 transition-colors'>
+                <button onClick={() => navigate(item.slug)} className=' px-6 py-2 rounded-full hover:bg-blue-100 transition-colors'>
                   {item.name}
                 </button>
               </li>
