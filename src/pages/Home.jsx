@@ -32,10 +32,10 @@ function Home() {
                 <Container>
                     <div className="flex flex-wrap">
                     <div className="p-2 w-full">
-    <h1 className="flex md:justify-start text-4xl md:text-6xl font-bold mt-6 font-qualigo">
+    <h1 className="flex justify-start text-4xl md:text-6xl font-bold mt-6 font-qualigo">
         Life's more colorful,
     </h1>
-    <h1 className="flex md:justify-start text-4xl md:text-6xl font-bold mt-10 md:mt-20 font-qualigo">
+    <h1 className="flex justify-start text-4xl md:text-6xl font-bold mt-10 md:mt-20 font-qualigo">
         when we connect.
     </h1>
     <div className='mt-8 md:mt-16'>
