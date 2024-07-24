@@ -32,20 +32,21 @@ function Home() {
                 <Container>
                     <div className="flex flex-wrap">
                     <div className="p-2 w-full">
-    <h1 className="flex justify-start text-4xl md:text-6xl font-bold mt-6 font-qualigo">
+    <h1 className="flex justify-start text-left text-4xl md:text-6xl font-bold mt-6 font-qualigo leading-normal md:leading-tight">
         Life's more colorful,
     </h1>
-    <h1 className="flex justify-start text-4xl md:text-6xl font-bold mt-10 md:mt-20 font-qualigo">
+    <h1 className="flex justify-start text-left text-4xl md:text-6xl font-bold mt-10 md:mt-20 font-qualigo leading-normal md:leading-tight">
         when we connect.
     </h1>
-    <div className='mt-8 md:mt-16'>
+    <div className='flex justify-start mt-8 md:mt-16'>
         <Link to="/login">
-            <button className="bg-transparent text-black border border-black rounded-full px-4 py-2 hover:bg-black hover:text-white transition-colors">
+            <button className="bg-transparent text-black border border-black md:text-2xl rounded-full px-6 py-4 hover:bg-black hover:text-white transition-colors">
                 Login to Read Posts
             </button>
         </Link>
     </div>
 </div>
+
                     </div>
                 </Container>
             </div>
