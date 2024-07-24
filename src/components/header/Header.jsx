@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container, Logo, LogoutBtn } from "../index";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Image from "../../assets/title.png";
@@ -25,9 +25,12 @@ function classNames(...classes) {
 }
 
 function Header() {
+  const location = useLocation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const authStatus = useSelector((state) => state.auth.status);
+
+  
 
   const logoutHandler = () => {
     authService.logout().then(() => {
@@ -42,12 +45,18 @@ function Header() {
   };
 
   const navigation = [
-    { name: "Home", slug: "/", active: true },
-    { name: "Login", slug: "/login", active: !authStatus },
-    { name: "Signup", slug: "/signup", active: !authStatus },
-    { name: "My Posts", slug: "/my-posts", active: authStatus },
-    { name: "Add Post", slug: "/add-post", active: authStatus },
+    { name: "Home", slug: "/", active: true, current: false},
+    { name: "Login", slug: "/login", active: !authStatus, current: false },
+    { name: "Signup", slug: "/signup", active: !authStatus, current: false },
+    { name: "My Posts", slug: "/my-posts", active: authStatus, current: false },
+    { name: "Add Post", slug: "/add-post", active: authStatus, current: false },
   ];
+
+  const updatedNavigation = navigation.map(item => ({
+    ...item,
+    current: location.pathname === item.slug
+  }));
+
 
   const handleNavigation = (slug) => {
     navigate(slug);
@@ -70,7 +79,7 @@ function Header() {
                 </div>
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-baseline space-x-4">
-                    {navigation.map(
+                    {updatedNavigation.map(
                       (item) =>
                         item.active && (
                           <button
