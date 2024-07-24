@@ -62,7 +62,7 @@ function Header() {
     navigate(slug);
   };
 
-  const handleButtonClick = () => {
+  const handleAboutMe = () => {
     window.location.href =
       "https://www.linkedin.com/in/atharv-gupta-0885b1230/";
   };
@@ -120,7 +120,7 @@ function Header() {
                     >
                       <MenuItem key="aboutme">
                         <button
-                          onClick={handleButtonClick}
+                          onClick={handleAboutMe}
                           className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
                         >
                           About Me
@@ -184,7 +184,7 @@ function Header() {
                   <img
                     alt=""
                     src={LogoImg}
-                    className="h-10 w-10 rounded-full"
+                    className="h-10 w-11 rounded-full"
                   />
                 </div>
                 <div className="ml-3">
@@ -200,7 +200,7 @@ function Header() {
                 <DisclosureButton
                   key="aboutme"
                   as="button"
-                  onClick={handleButtonClick}
+                  onClick={handleAboutMe}
                   className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                 >
                   About Me
