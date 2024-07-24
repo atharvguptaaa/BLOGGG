@@ -31,13 +31,21 @@ function Home() {
             <div className="w-full py-8 mt-4 text-center">
                 <Container>
                     <div className="flex flex-wrap">
-                        <div className="p-2 w-full">
-                            <Link to="/login">
-                                <h1 className="text-2xl font-bold hover:text-gray-500 font-qualigo">
-                                    Login to Read Posts
-                                </h1>
-                            </Link>
-                        </div>
+                    <div className="p-2 w-full">
+    <h1 className="flex justify-start text-4xl md:text-6xl font-bold mt-6 font-qualigo">
+        Life's more colorful,
+    </h1>
+    <h1 className="flex justify-start text-4xl md:text-6xl font-bold mt-10 md:mt-20 font-qualigo">
+        when we connect.
+    </h1>
+    <div className='mt-8 md:mt-16'>
+        <Link to="/login">
+            <button className="bg-transparent text-black border border-black rounded-full px-4 py-2 hover:bg-black hover:text-white transition-colors">
+                Login to Read Posts
+            </button>
+        </Link>
+    </div>
+</div>
                     </div>
                 </Container>
             </div>
