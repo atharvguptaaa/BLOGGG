@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face{
+    font-family:"Qualigo";
+    src: local("Qualigo Regular - Demo"),
+    url('./assets/fonts/Qaligo Regular - Demo.otf') format("opentype");
+
+};

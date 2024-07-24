@@ -118,14 +118,14 @@ function Header() {
                         </button>
                       </MenuItem>
 
-                      <MenuItem key="logout">
+                    {authStatus&&  <MenuItem key="logout">
                         <button
                           onClick={logoutHandler}
                           className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
                         >
                           Logout
                         </button>
-                      </MenuItem>
+                      </MenuItem> }
                     </MenuItems>
                   </Menu>
                 </div>
@@ -197,14 +197,14 @@ function Header() {
                   About Me
                 </DisclosureButton>
 
-                <DisclosureButton
+              {authStatus&&  <DisclosureButton
                   key="Logout"
                   as="button"
                   onClick={logoutHandler}
                   className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                 >
                   Logout
-                </DisclosureButton>
+                </DisclosureButton>  }
               </div>
             </div>
           </DisclosurePanel>
