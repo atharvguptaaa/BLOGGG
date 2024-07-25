@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import { Container, Logo, LogoutBtn } from "../index";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -55,7 +55,9 @@ function Header() {
   const updatedNavigation = navigation.map(item => ({
     ...item,
     current: location.pathname === item.slug
+    
   }));
+
 
 
   const handleNavigation = (slug) => {
