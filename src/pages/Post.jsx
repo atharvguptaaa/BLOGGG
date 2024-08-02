@@ -16,6 +16,7 @@ export default function Post() {
 
 
     const { slug } = useParams();
+   
     const navigate = useNavigate();
  
 
