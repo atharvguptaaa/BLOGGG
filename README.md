@@ -16,5 +16,19 @@
 - **React Router**: For handling client-side routing and navigation.
 - **Appwrite**: Backend services including authentication, database, and storage.
 
+## 📂 Project Structure
+
+```bash
+src/
+├── appwrite/            # Appwrite configuration and setup
+├── assets/              # Static assets like images, icons, etc.
+├── components/          # Reusable components like buttons, headers, footers
+├── conf/                # Configuration files
+├── pages/               # Page components corresponding to different routes
+├── store/               # Redux slices and state management logic
+├── App.css              # Global styles for the application
+├── App.jsx              # Main application component
+├── index.css            # Additional global styles
+└── main.jsx             # Entry point of the React application
 
 
