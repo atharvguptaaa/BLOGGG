@@ -2,7 +2,9 @@
 
 **BLOGGG** is a feature-rich blogging platform designed to deliver a seamless writing and reading experience. This project leverages modern web technologies like Redux Toolkit, React Router, and Appwrite to create a robust and scalable application.
 
-### Working Link - [Click Here](https://blogatharv.vercel.app/)
+### [Live Demo](https://blogatharv.vercel.app/)
+
+![image](https://github.com/user-attachments/assets/a53de68a-00d9-4e24-b0c5-8eea1dd989d3)
 
 ## 🚀 Features
 
