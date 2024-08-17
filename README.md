@@ -4,8 +4,6 @@
 
 ### [Live Demo](https://blogatharv.vercel.app/)
 
-![image](https://github.com/user-attachments/assets/a53de68a-00d9-4e24-b0c5-8eea1dd989d3)
-
 ## 🚀 Features
 
 - **Efficient State Management**: Built using Redux Toolkit for scalable and maintainable state management.
@@ -19,6 +17,8 @@
 - **Redux Toolkit**: For managing and centralizing the application state.
 - **React Router**: For handling client-side routing and navigation.
 - **Appwrite**: Backend services including authentication, database, and storage.
+
+  ![image](https://github.com/user-attachments/assets/a53de68a-00d9-4e24-b0c5-8eea1dd989d3)
 
 ## 📂 Project Structure
 
